@@ -34,6 +34,7 @@ function init(){
         tickFormat,
         tickValues
       } = {}) {
+        svg.select(".legend").remove();
         svg.append("g").attr("class","legend")
         const svg2 = d3.select("svg").select(".legend")
           .attr("width", width)
@@ -85,7 +86,11 @@ function init(){
       }
       
       function ramp(color, n = 256) {
+        if (document.getElementById("demo")){
+            document.getElementById("demo").remove();
+        }
         var canvas = document.createElement('canvas');
+        canvas.id = "ramp"
         canvas.width = n;
         canvas.height = 1;
         const context = canvas.getContext("2d");
@@ -113,16 +118,6 @@ function init(){
             }
         }).then(function(data){
 
-            let selectedYear = "2020";
-            let domain = [
-                d3.min(data, function(d){
-                    return d[selectedYear];
-                }),0,
-                d3.max(data, function(d){
-                    return d[selectedYear];
-                })]
-            colorScale.domain(domain);
-
             for(const d of data){
                 const subRegion = d.subregion;
                 for (const j of json.features){
@@ -132,17 +127,17 @@ function init(){
                 }
             }
 
-            let mouseOver = function(e, obj){
+            function mouseOver (e, obj){
                 let boxh = 60, boxw = 150;
                 svg.selectAll("path")
                 .transition()
                 .duration(100)
-                .style("opacity", "0.5");
+                .style("filter", "saturate(0.2)");
 
                 svg.selectAll(`.${d3.select(e).attr("class")}`)
                 .transition()
                 .duration(100)
-                .style("opacity", "1");
+                .style("filter", "saturate(1)");
     
                 svg.append("rect")
                 .attr("x", d3.pointer(event)[0])
@@ -178,17 +173,46 @@ function init(){
                     .attr("x", d3.pointer(event)[0])
                     .attr("y", d3.pointer(event)[1])
                 })
-            }
+                }
     
-            let mouseOut = function(){
-                svg.selectAll("path")
-                .transition()
-                .duration(100)
-                .style("opacity", "1");
-    
-                svg.selectAll("rect").remove();
-                svg.selectAll(".info-box").remove();
+                function mouseOut(){
+                    svg.selectAll("path")
+                    .transition()
+                    .duration(100)
+                    .style("filter", "saturate(1)");
+        
+                    svg.selectAll("rect").remove();
+                    svg.selectAll(".info-box").remove();
+                }
+
+            // Year slider
+            let rangeInput = document.querySelector(".range-input input");
+            let rangeValue = document.querySelector(".range-input .value div");
+            let start = parseFloat(rangeInput.min);
+            let end = parseFloat(rangeInput.max);
+            let step = parseFloat(rangeInput.step);
+            let selectedYear = "1995";
+
+            for(let i=start;i<=end;i+=step){
+                rangeValue.innerHTML += '<div>'+i+'</div>';
             }
+
+            // colorScale.domain([
+            //     d3.min(data, function(d){
+            //         return d[selectedYear];
+            //     }),0,
+            //     d3.max(data, function(d){
+            //         return d[selectedYear];
+            //     })]);
+
+            // in case kalau mau dilihat semua dari 1990-2020
+            colorScale.domain([
+                d3.min(data, function(d){
+                    return Math.min(d["1990"], d["1995"], d["2000"], d["2005"], d["2010"], d["2015"], d["2020"]);
+                }),0,
+                d3.max(data, function(d){
+                    return Math.max(d["1990"], d["1995"], d["2000"], d["2005"], d["2010"], d["2015"], d["2020"]);
+                })]);
 
             svg.selectAll("path")
             .data(json.features) // important data from geojson is under features key
@@ -207,23 +231,85 @@ function init(){
             })
             .on("mouseout",mouseOut);
 
+            // legend({
+            //     color: colorScale,
+            //     title: "Population Growth (Millions)",
+            //     tickFormat: ".2s",
+            //     tickValues: [
+            //         d3.min(data, function(d){return d[selectedYear];}) * 0.9,
+            //         d3.min(data, function(d){return d[selectedYear];}) * 0.45,
+            //         0,
+            //         d3.max(data, function(d){return d[selectedYear];}) * 0.45,
+            //         d3.max(data, function(d){return d[selectedYear];}) * 0.9] 
+            // });
+
+            // in case kalau mau dilihat semua dari 1990-2020
             legend({
                 color: colorScale,
-                title: "Population Growth (Millions)",
+                title: "Population Growth by Migration (in Millions)",
                 tickFormat: ".2s",
                 tickValues: [
-                    d3.min(data, function(d){return d[selectedYear];}) * 0.9,
-                    d3.min(data, function(d){return d[selectedYear];}) * 0.45,
+                    d3.min(data, function(d){
+                        return Math.min(d["1990"], d["1995"], d["2000"], d["2005"], d["2010"], d["2015"], d["2020"]);
+                    }) * 0.9,
+                    d3.min(data, function(d){
+                        return Math.min(d["1990"], d["1995"], d["2000"], d["2005"], d["2010"], d["2015"], d["2020"]);
+                    }) * 0.45,
                     0,
-                    d3.max(data, function(d){return d[selectedYear];}) * 0.45,
-                    d3.max(data, function(d){return d[selectedYear];}) * 0.9] 
+                    d3.max(data, function(d){
+                        return Math.max(d["1990"], d["1995"], d["2000"], d["2005"], d["2010"], d["2015"], d["2020"]);
+                    }) * 0.45,
+                    d3.max(data, function(d){
+                        return Math.max(d["1990"], d["1995"], d["2000"], d["2005"], d["2010"], d["2015"], d["2020"]);
+                    }) * 0.9] 
             });
 
-            $(function() {
-                $( "#slider-1" ).slider();
-             });
+            // event lisner on slider change the selected year dynamically
+            rangeInput.addEventListener("input",function(){
+                let top = parseFloat(rangeInput.value - 1990)/step * -40;
+                rangeValue.style.marginTop = top+"px";
 
+                selectedYear = rangeInput.value;
 
+                // in case kalau mau di lihat per year
+                // colorScale.domain([
+                //     d3.min(data, function(d){
+                //         return d[selectedYear];
+                //     }),0,
+                //     d3.max(data, function(d){
+                //         return d[selectedYear];
+                //     })]);
+
+                svg.selectAll("path")
+                .data(json.features) // important data from geojson is under features key
+                .join("path")
+                .attr("class", function(d){
+                    return d.properties.subregion.replace(/ /g, '');
+                })
+                .style("fill", function(d){
+                    return colorScale(d.properties.netMigration[selectedYear])
+                })
+                .style("stroke", "white")
+                .style("stroke-width", "1px")
+                .attr("d", path)
+                .on("mouseover",function(event, d){
+                    return mouseOver(this, d.properties)
+                })
+                .on("mouseout",mouseOut);
+
+                // in case kalau mau di lihat per year
+                // legend({
+                //     color: colorScale,
+                //     title: "Population Growth by Migration (in Millions)",
+                //     tickFormat: ".2s",
+                //     tickValues: [
+                //         d3.min(data, function(d){return d[selectedYear];}) * 0.9,
+                //         d3.min(data, function(d){return d[selectedYear];}) * 0.45,
+                //         0,
+                //         d3.max(data, function(d){return d[selectedYear];}) * 0.45,
+                //         d3.max(data, function(d){return d[selectedYear];}) * 0.9] 
+                // });
+            });
             
         })
     })

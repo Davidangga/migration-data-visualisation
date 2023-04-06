@@ -8,16 +8,24 @@
     <meta name="keywords" content="HTML, CSS, D3">
     <meta name="author" content="David Anggawijaya">
     <title>DV 1</title>
-    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
-         rel = "stylesheet">
-    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="style.css">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="script.js" defer></script>
     <style>
     </style>
 </head>
 <body>
-    <div class="chart"></div>
+    <div id="dv-1">
+        <div class="chart"></div>
+        <div class="left-info">
+            <h3>Year Slider:</h3>
+            <div class="range-input">
+                <input type="range" min="1990" max="2020" value="1990" step="5">
+                <div class="value">
+                  <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
