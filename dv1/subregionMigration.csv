@@ -1,0 +1,381 @@
+destination,origin,1990,1995,2000,2005,2010,2015,2020
+  Eastern Africa,  Middle Africa,370968,450933,756743,788326,800135,1029628,1251025
+  Eastern Africa,  Northern Africa,179281,343372,416596,488605,214886,684649,708035
+  Eastern Africa,  Southern Africa,36745,47087,50491,59456,63927,63506,66040
+  Eastern Africa,  Western Africa,5911,7363,7915,10745,16052,16446,17483
+  Eastern Africa,  Central Asia,0,0,0,0,0,0,0
+  Eastern Africa,  Eastern Asia,2568,5338,10875,8522,6882,7416,7979
+  Eastern Africa,  South-Eastern Asia,104,613,1142,1080,1023,1146,1163
+  Eastern Africa,  Southern Asia,17476,21658,27246,37089,48641,52114,52982
+  Eastern Africa,  Western Asia,357,325,365,313,359,13364,20660
+  Eastern Africa,  Eastern Europe,418,361,337,365,408,425,405
+  Eastern Africa,  Northern Europe,24848,23971,29243,25013,17976,17816,18334
+  Eastern Africa,  Southern Europe,2602,3314,3769,4862,5459,5675,5796
+  Eastern Africa,  Western Europe,50100,63865,82487,95923,104325,109614,117627
+  Eastern Africa,  Caribbean,164,162,50,52,55,59,57
+  Eastern Africa,  Central America,0,0,0,0,0,0,0
+  Eastern Africa,  South America,0,0,0,0,0,0,0
+  Eastern Africa, NORTHERN AMERICA,2334,2517,3144,3475,3835,3780,3935
+  Eastern Africa,  Australia and New Zealand,148,140,134,196,310,283,373
+  Eastern Africa,  Melanesia,0,0,0,0,0,0,0
+  Middle Africa,  Eastern Africa,175624,1424589,278904,214925,186610,355514,436882
+  Middle Africa,  Northern Africa,49005,63046,76729,288839,320176,348342,401250
+  Middle Africa,  Southern Africa,2867,3322,3770,4912,5963,6820,7249
+  Middle Africa,  Western Africa,209045,231509,259537,293417,311640,457318,541785
+  Middle Africa,  Central Asia,0,0,0,0,0,0,0
+  Middle Africa,  Eastern Asia,510,630,837,705,1174,1592,1641
+  Middle Africa,  South-Eastern Asia,0,0,0,0,0,0,0
+  Middle Africa,  Southern Asia,0,0,0,0,0,0,0
+  Middle Africa,  Western Asia,1156,1482,1916,1820,2558,3506,3722
+  Middle Africa,  Eastern Europe,953,1106,1487,976,2097,2712,2701
+  Middle Africa,  Northern Europe,12,26,37,287,235,279,318
+  Middle Africa,  Southern Europe,6292,7406,8649,9012,9312,9513,9287
+  Middle Africa,  Western Europe,38476,39957,41944,32984,38995,46570,50500
+  Middle Africa,  Caribbean,164,190,266,169,403,536,531
+  Middle Africa,  Central America,0,0,0,0,0,0,0
+  Middle Africa,  South America,0,0,0,0,0,0,0
+  Middle Africa, NORTHERN AMERICA,805,1246,1629,2398,2325,2665,2938
+  Middle Africa,  Australia and New Zealand,9,13,16,13,13,10,10
+  Middle Africa,  Melanesia,0,0,0,0,0,0,0
+  Northern Africa,  Eastern Africa,1106236,912475,723706,460314,571303,630901,1379123
+  Northern Africa,  Middle Africa,233083,121032,106674,118689,125021,100188,144667
+  Northern Africa,  Southern Africa,1112,952,836,953,1037,961,1180
+  Northern Africa,  Western Africa,39277,39098,39825,43038,35266,37818,44777
+  Northern Africa,  Central Asia,1180,1540,1955,2195,2400,2453,4512
+  Northern Africa,  Eastern Asia,10340,8545,6987,7817,7679,7396,8993
+  Northern Africa,  South-Eastern Asia,24461,26615,29521,32341,35342,36218,41271
+  Northern Africa,  Southern Asia,9663,10428,11451,12603,12549,12652,14793
+  Northern Africa,  Western Asia,360197,429494,520708,603982,649872,784226,903769
+  Northern Africa,  Eastern Europe,46742,30468,15172,17066,18561,17067,21115
+  Northern Africa,  Northern Europe,18365,14928,12036,13263,14471,14590,16975
+  Northern Africa,  Southern Europe,34419,26001,18803,20501,22343,23495,27273
+  Northern Africa,  Western Europe,96366,68853,46246,49945,66129,74527,85229
+  Northern Africa,  Caribbean,25,24,24,28,30,21,29
+  Northern Africa,  Central America,696,700,730,824,902,891,1038
+  Northern Africa,  South America,970,747,564,656,711,586,778
+  Northern Africa, NORTHERN AMERICA,33018,24473,16833,18544,20397,20420,23989
+  Northern Africa,  Australia and New Zealand,2138,1522,963,1099,1195,1109,1361
+  Northern Africa,  Melanesia,0,0,0,0,0,0,0
+  Southern Africa,  Eastern Africa,540300,518762,508352,681660,1085740,1405000,1433038
+  Southern Africa,  Middle Africa,49737,55237,91744,99850,130904,194695,187553
+  Southern Africa,  Northern Africa,6450,5156,5084,6157,8501,10683,12321
+  Southern Africa,  Western Africa,30465,19994,14714,18368,38034,61977,54455
+  Southern Africa,  Central Asia,0,0,0,20,29,37,42
+  Southern Africa,  Eastern Asia,19306,16948,17884,22122,22134,21116,21637
+  Southern Africa,  South-Eastern Asia,5172,3636,3000,3655,5105,6452,7449
+  Southern Africa,  Southern Asia,18755,21037,28528,37036,68586,87170,70109
+  Southern Africa,  Western Asia,7079,5686,5882,7520,10783,13805,15988
+  Southern Africa,  Eastern Europe,12016,10619,11957,15021,21340,27210,31512
+  Southern Africa,  Northern Europe,132789,118220,137616,179747,135043,84701,93943
+  Southern Africa,  Southern Europe,39038,33842,38058,49178,51800,53527,62236
+  Southern Africa,  Western Europe,88022,65620,57391,67974,63110,58262,67284
+  Southern Africa,  Caribbean,2386,2292,2348,2255,2667,3061,3442
+  Southern Africa,  Central America,333,244,229,300,435,559,647
+  Southern Africa,  South America,4216,3677,3975,4797,6663,8396,9685
+  Southern Africa, NORTHERN AMERICA,15132,11820,11536,14797,14926,14834,17196
+  Southern Africa,  Australia and New Zealand,6600,5273,5249,6589,9743,9096,10626
+  Southern Africa,  Melanesia,106,65,45,57,82,105,121
+  Western Africa,  Eastern Africa,1229,1560,2212,2254,2998,6359,6606
+  Western Africa,  Middle Africa,40282,42188,43665,94301,82864,112726,146642
+  Western Africa,  Northern Africa,15707,16498,16353,18897,45945,58237,63345
+  Western Africa,  Southern Africa,271,254,247,141,590,2045,2079
+  Western Africa,  Central Asia,0,0,0,0,1488,1832,2146
+  Western Africa,  Eastern Asia,1544,1524,1497,1868,6449,8974,9952
+  Western Africa,  South-Eastern Asia,31,35,40,45,1059,1369,1573
+  Western Africa,  Southern Asia,1695,1665,1702,1818,2523,3299,3411
+  Western Africa,  Western Asia,10513,10644,10280,6845,10352,12441,13839
+  Western Africa,  Eastern Europe,1241,1211,1151,1383,1375,1402,1512
+  Western Africa,  Northern Europe,3990,3882,3944,2977,2027,2485,2571
+  Western Africa,  Southern Europe,3077,3126,3271,3551,6639,7645,8028
+  Western Africa,  Western Europe,22356,22244,20055,27004,22566,24361,25809
+  Western Africa,  Caribbean,150,192,229,528,4403,9412,9655
+  Western Africa,  Central America,4,5,6,5,3,430,404
+  Western Africa,  South America,1080,1184,1080,1134,2805,5977,6258
+  Western Africa, NORTHERN AMERICA,6845,7046,7025,5941,5016,5356,5505
+  Western Africa,  Australia and New Zealand,17,17,19,27,27,45,45
+  Western Africa,  Melanesia,0,0,0,0,0,31,25
+  Central Asia,  Eastern Africa,38,31,27,25,24,23,21
+  Central Asia,  Middle Africa,0,0,0,0,0,0,0
+  Central Asia,  Northern Africa,198,160,138,133,132,129,128
+  Central Asia,  Southern Africa,0,0,0,0,0,0,0
+  Central Asia,  Western Africa,37,30,26,24,23,22,20
+  Central Asia,  Eastern Asia,64886,68901,72858,82814,92752,98162,103107
+  Central Asia,  South-Eastern Asia,410,309,205,175,146,130,123
+  Central Asia,  Southern Asia,14431,20039,22734,17174,16622,16447,16439
+  Central Asia,  Western Asia,158106,152445,146848,153495,158441,161964,166980
+  Central Asia,  Eastern Europe,5385364,4780364,4206342,4182388,4179257,4277544,4411336
+  Central Asia,  Northern Europe,16792,14977,12942,12251,11484,11296,11520
+  Central Asia,  Southern Europe,0,0,0,0,0,0,0
+  Central Asia,  Western Europe,36645,26913,16303,14563,12366,11766,11634
+  Central Asia,  Caribbean,37,30,26,24,23,22,20
+  Central Asia,  Central America,0,0,0,0,0,0,0
+  Central Asia,  South America,0,0,0,0,0,0,0
+  Central Asia, NORTHERN AMERICA,494,400,345,331,329,323,320
+  Central Asia,  Australia and New Zealand,166,135,117,112,111,109,107
+  Central Asia,  Melanesia,0,0,0,0,0,0,0
+  Eastern Asia,  Eastern Africa,0,0,0,0,0,0,0
+  Eastern Asia,  Middle Africa,0,0,0,0,0,0,0
+  Eastern Asia,  Northern Africa,368,645,1103,1503,1593,1747,1959
+  Eastern Asia,  Southern Africa,0,190,442,830,1549,1212,2160
+  Eastern Asia,  Western Africa,791,2606,3746,4993,5806,5695,7260
+  Eastern Asia,  Central Asia,655,3014,6156,11867,32244,45633,59664
+  Eastern Asia,  South-Eastern Asia,587623,697929,882386,1070752,1234386,1569277,2040250
+  Eastern Asia,  Southern Asia,38375,68373,93572,124518,151919,186270,258218
+  Eastern Asia,  Western Asia,109,120,133,148,180,222,236
+  Eastern Asia,  Eastern Europe,3985,7811,12998,15310,16801,18288,22061
+  Eastern Asia,  Northern Europe,27044,32705,39986,42285,47626,49580,56013
+  Eastern Asia,  Southern Europe,6391,7475,5851,7718,8042,9634,11814
+  Eastern Asia,  Western Europe,14397,16678,20298,25491,27831,29764,36383
+  Eastern Asia,  Caribbean,0,0,0,0,0,0,0
+  Eastern Asia,  Central America,786,1255,1740,1845,1956,2141,2735
+  Eastern Asia,  South America,73571,233902,333570,314708,342092,289953,328942
+  Eastern Asia, NORTHERN AMERICA,77856,101038,125708,143583,161141,183412,215678
+  Eastern Asia,  Australia and New Zealand,13913,19111,26005,28549,33300,33770,40224
+  Eastern Asia,  Melanesia,0,0,0,0,0,0,0
+  South-Eastern Asia,  Eastern Africa,57,135,528,880,1208,1700,3492
+  South-Eastern Asia,  Middle Africa,703,944,3082,2500,642,653,689
+  South-Eastern Asia,  Northern Africa,14754,10370,5667,4117,3326,3565,3756
+  South-Eastern Asia,  Southern Africa,186,250,852,689,800,813,864
+  South-Eastern Asia,  Western Africa,65,86,346,283,369,376,397
+  South-Eastern Asia,  Central Asia,0,0,0,0,0,0,0
+  South-Eastern Asia,  Eastern Asia,707453,648755,641051,687353,774279,868560,896162
+  South-Eastern Asia,  Southern Asia,193037,285758,432764,771338,1211135,1649043,1733636
+  South-Eastern Asia,  Western Asia,14945,10669,16838,19657,19672,21890,23055
+  South-Eastern Asia,  Eastern Europe,54,89,493,395,480,486,511
+  South-Eastern Asia,  Northern Europe,34573,31306,56436,61600,50453,56022,59120
+  South-Eastern Asia,  Southern Europe,1909,2233,3151,2874,4721,4790,5045
+  South-Eastern Asia,  Western Europe,7178,7632,11777,13171,19401,20544,21674
+  South-Eastern Asia,  Caribbean,102,114,222,204,223,143,145
+  South-Eastern Asia,  Central America,61,81,410,330,215,218,227
+  South-Eastern Asia,  South America,719,925,6803,5548,1437,1324,1389
+  South-Eastern Asia, NORTHERN AMERICA,34679,40182,54181,57602,80260,86015,90225
+  South-Eastern Asia,  Australia and New Zealand,17729,17811,20603,27283,37557,42147,43908
+  South-Eastern Asia,  Melanesia,9,12,373,301,59,60,62
+  Southern Asia,  Eastern Africa,13783,9383,4982,37834,62955,58660,54863
+  Southern Asia,  Middle Africa,0,0,0,0,0,0,0
+  Southern Asia,  Northern Africa,16,43,73,109,200,207,208
+  Southern Asia,  Southern Africa,3,33,64,127,257,260,262
+  Southern Asia,  Western Africa,1286,1038,790,930,1037,966,903
+  Southern Asia,  Central Asia,44209,40859,38215,34321,28686,18589,7028
+  Southern Asia,  Eastern Asia,191283,266472,250409,278241,301516,314254,307829
+  Southern Asia,  South-Eastern Asia,659702,687220,715035,692752,856870,867564,1520414
+  Southern Asia,  Western Asia,327595,302825,261590,215376,220986,184290,163263
+  Southern Asia,  Eastern Europe,3446,2565,1685,1598,1580,1483,1398
+  Southern Asia,  Northern Europe,18622,28998,39372,49697,59442,61262,59593
+  Southern Asia,  Southern Europe,774,1333,1878,3241,5998,5787,5844
+  Southern Asia,  Western Europe,12089,8443,4775,5447,6379,6149,5913
+  Southern Asia,  Caribbean,0,3,8,18,38,37,36
+  Southern Asia,  Central America,0,0,0,0,0,0,0
+  Southern Asia,  South America,552,5387,10221,12165,14083,14919,14628
+  Southern Asia, NORTHERN AMERICA,40818,39095,37370,64673,87178,86865,83426
+  Southern Asia,  Australia and New Zealand,3234,2156,1079,3261,5105,4825,4570
+  Southern Asia,  Melanesia,2385,1298,210,598,895,833,779
+  Western Asia,  Eastern Africa,180824,207948,232013,283128,460797,590948,637809
+  Western Asia,  Middle Africa,12756,11742,9704,6363,7577,7977,10546
+  Western Asia,  Northern Africa,1538259,1692014,1883459,1967372,2841763,3448481,3949356
+  Western Asia,  Southern Africa,9870,11597,12789,14488,17065,16924,16888
+  Western Asia,  Western Africa,3610,4008,4795,8976,19596,25949,28522
+  Western Asia,  Central Asia,124218,105962,97846,93469,89669,90728,95152
+  Western Asia,  Eastern Asia,4129,13492,22778,19068,27812,25561,31898
+  Western Asia,  South-Eastern Asia,1341746,1476255,1613525,1944236,2894751,3597730,4294915
+  Western Asia,  Southern Asia,4537153,5107281,5843682,7605717,12515447,15897556,18979129
+  Western Asia,  Eastern Europe,1497103,1368211,1256040,1178925,1123659,1137669,1334070
+  Western Asia,  Northern Europe,99047,108556,120847,124888,153325,157242,180436
+  Western Asia,  Southern Europe,172418,199053,225617,236760,253944,248815,332995
+  Western Asia,  Western Europe,295103,350018,408862,429404,462037,465614,602270
+  Western Asia,  Caribbean,61,127,206,231,262,247,300
+  Western Asia,  Central America,1501,1883,2169,2487,2839,2903,2901
+  Western Asia,  South America,41207,48017,52220,57240,63193,64891,63335
+  Western Asia, NORTHERN AMERICA,85329,97044,106461,116212,139198,140189,148550
+  Western Asia,  Australia and New Zealand,6062,6801,7414,8380,10188,9643,10968
+  Western Asia,  Melanesia,1,2,2,3,3,2,1
+  Eastern Europe,  Eastern Africa,3520,3546,3499,3828,4108,4638,5891
+  Eastern Europe,  Middle Africa,2367,2280,2150,2564,2940,3228,4335
+  Eastern Europe,  Northern Africa,11637,11462,11203,12370,13497,16475,23714
+  Eastern Europe,  Southern Africa,1032,1144,1254,1515,1750,1927,2785
+  Eastern Europe,  Western Africa,4419,4619,4720,5239,5679,6789,10487
+  Eastern Europe,  Central Asia,4979196,5175534,5219532,5395269,5501346,5596606,5608308
+  Eastern Europe,  Eastern Asia,115320,118810,119048,126416,132337,138542,156229
+  Eastern Europe,  South-Eastern Asia,57909,56404,54288,75592,94116,88177,103777
+  Eastern Europe,  Southern Asia,52692,46512,39234,41166,37937,54676,54996
+  Eastern Europe,  Western Asia,2431396,2388180,2272936,2163036,2023156,2100238,2113793
+  Eastern Europe,  Northern Europe,464948,467926,465396,451241,437694,453951,546407
+  Eastern Europe,  Southern Europe,98312,88204,79377,102879,130707,206512,326399
+  Eastern Europe,  Western Europe,398873,384231,369761,363211,357785,376359,498007
+  Eastern Europe,  Caribbean,3802,3877,3858,4066,4195,4564,5294
+  Eastern Europe,  Central America,717,874,1032,1356,1665,2207,4316
+  Eastern Europe,  South America,6610,6992,7272,7076,6819,8808,14197
+  Eastern Europe, NORTHERN AMERICA,26932,27843,29251,36708,44749,48302,65959
+  Eastern Europe,  Australia and New Zealand,2863,2846,2844,3311,3773,4131,5705
+  Eastern Europe,  Melanesia,4,10,12,15,14,48,59
+  Northern Europe,  Eastern Africa,307072,378977,456553,556612,719518,872893,1010801
+  Northern Europe,  Middle Africa,5303,15614,26709,45576,52298,63560,74790
+  Northern Europe,  Northern Africa,64811,81536,99296,124410,137138,168395,200986
+  Northern Europe,  Southern Africa,72713,109854,150075,177615,242491,229140,276484
+  Northern Europe,  Western Africa,96658,144275,196182,284386,352698,409010,467833
+  Northern Europe,  Central Asia,38725,31909,33388,38217,38119,38968,42629
+  Northern Europe,  Eastern Asia,161776,242612,326327,365470,401358,491231,544672
+  Northern Europe,  South-Eastern Asia,188398,231982,276163,377090,468923,558781,640548
+  Northern Europe,  Southern Asia,917139,1056004,1207861,1526795,1858184,2208733,2355410
+  Northern Europe,  Western Asia,304432,378962,451461,572065,666021,857637,1080927
+  Northern Europe,  Eastern Europe,1456135,1259299,1090507,1529268,1932685,2403221,2804341
+  Northern Europe,  Southern Europe,319200,384633,446082,552320,634517,788876,1036509
+  Northern Europe,  Western Europe,456425,524000,601177,661371,770507,829519,912528
+  Northern Europe,  Caribbean,188868,214725,244318,240782,253482,265394,271966
+  Northern Europe,  Central America,7648,12237,16753,21197,23757,28321,33792
+  Northern Europe,  South America,93960,122726,149566,195426,216620,247865,284129
+  Northern Europe, NORTHERN AMERICA,338437,319562,310927,338326,378830,404292,415365
+  Northern Europe,  Australia and New Zealand,118861,144645,173869,180841,202489,220728,246328
+  Northern Europe,  Melanesia,801,2925,5108,6243,6615,7890,8868
+  Southern Europe,  Eastern Africa,120515,118789,124826,144627,163805,170661,196293
+  Southern Europe,  Middle Africa,158968,184386,222195,236451,219305,235980,281276
+  Southern Europe,  Northern Africa,460688,570623,758803,1183899,1577294,1501684,1657632
+  Southern Europe,  Southern Africa,9511,14231,19932,23942,26599,27982,31366
+  Southern Europe,  Western Africa,144966,189403,244766,397364,523635,536911,704169
+  Southern Europe,  Central Asia,45480,38503,32855,40235,49692,49456,53359
+  Southern Europe,  Eastern Asia,61551,80950,103723,254133,393380,399600,465123
+  Southern Europe,  South-Eastern Asia,90616,104488,125564,169552,218073,228787,255069
+  Southern Europe,  Southern Asia,89719,139436,195490,397573,588549,631713,798042
+  Southern Europe,  Western Asia,203615,227155,262119,283296,313581,311009,402595
+  Southern Europe,  Eastern Europe,191791,337770,491125,1809979,3216418,3132684,3253702
+  Southern Europe,  Northern Europe,216382,212990,252073,419058,578333,570343,603637
+  Southern Europe,  Western Europe,672348,734905,938381,1256152,1608121,1566312,1630782
+  Southern Europe,  Caribbean,49533,72539,117839,202899,320388,372394,443198
+  Southern Europe,  Central America,22406,29076,44113,82080,136596,165953,273561
+  Southern Europe,  South America,293636,382856,556548,1929196,2751762,2459140,2971721
+  Southern Europe, NORTHERN AMERICA,165434,139303,121511,154072,185813,187739,216325
+  Southern Europe,  Australia and New Zealand,35770,36576,38256,46999,57072,58605,69575
+  Southern Europe,  Melanesia,35,61,192,187,236,816,259
+  Western Europe,  Eastern Africa,187428,209322,231601,334091,381206,496877,640050
+  Western Europe,  Middle Africa,230776,249015,265175,363189,431414,482990,540512
+  Western Europe,  Northern Africa,2428771,2486433,2540323,3166083,3250192,3587755,4011942
+  Western Europe,  Southern Africa,22398,25758,29362,39386,46897,49337,62164
+  Western Europe,  Western Africa,349041,378564,408565,517398,595816,670374,820764
+  Western Europe,  Central Asia,21633,291804,562220,782305,954385,982036,1327858
+  Western Europe,  Eastern Asia,214501,248635,283734,349474,419022,459009,583269
+  Western Europe,  South-Eastern Asia,639524,665716,697431,734116,774272,807247,931644
+  Western Europe,  Southern Asia,446038,511552,578548,653041,723635,840172,1301495
+  Western Europe,  Western Asia,2394296,2632282,2699641,2481047,2631319,2954939,4384233
+  Western Europe,  Eastern Europe,1570589,2300914,3236221,3995603,4735281,5111104,7043559
+  Western Europe,  Northern Europe,441962,494636,548446,596007,643747,667479,786526
+  Western Europe,  Southern Europe,4871285,5171636,5507896,4390778,4226213,4322241,5652638
+  Western Europe,  Caribbean,55110,65350,75744,142912,153838,171273,197987
+  Western Europe,  Central America,32671,36622,40458,49386,61164,68273,85747
+  Western Europe,  South America,349575,392938,442480,576628,651015,693379,810016
+  Western Europe, NORTHERN AMERICA,238666,256300,274254,295485,312293,332072,402655
+  Western Europe,  Australia and New Zealand,29621,32438,35643,42997,48496,51134,61115
+  Western Europe,  Melanesia,798,786,777,1424,1638,1850,1967
+  Caribbean,  Eastern Africa,531,698,880,935,996,1052,1048
+  Caribbean,  Middle Africa,230,180,121,169,219,205,196
+  Caribbean,  Northern Africa,333,359,387,383,378,380,351
+  Caribbean,  Southern Africa,297,378,469,342,215,228,233
+  Caribbean,  Western Africa,552,625,750,805,1039,1081,1148
+  Caribbean,  Central Asia,3,4,4,7,11,10,10
+  Caribbean,  Eastern Asia,8231,9398,10669,8868,7887,10200,10723
+  Caribbean,  South-Eastern Asia,1252,1646,2122,3311,4820,5143,5507
+  Caribbean,  Southern Asia,3072,3582,4132,4801,6272,6499,6914
+  Caribbean,  Western Asia,2410,2653,2899,2489,2279,2322,2279
+  Caribbean,  Eastern Europe,8470,6931,5418,3829,2560,1992,1629
+  Caribbean,  Northern Europe,18646,19637,21383,20681,19949,20690,21639
+  Caribbean,  Southern Europe,34670,33199,32202,25314,20155,19796,20794
+  Caribbean,  Western Europe,82505,98826,115203,115713,125202,133508,134296
+  Caribbean,  Central America,16519,17457,18786,17444,15516,15379,14137
+  Caribbean,  South America,65570,76204,88463,84685,91798,92380,177107
+  Caribbean, NORTHERN AMERICA,281819,289565,300243,299067,273350,244398,242478
+  Caribbean,  Australia and New Zealand,205,282,381,405,447,478,507
+  Caribbean,  Melanesia,0,0,0,0,0,0,0
+  Central America,  Eastern Africa,148,109,123,177,219,219,229
+  Central America,  Middle Africa,104,98,121,177,250,252,270
+  Central America,  Northern Africa,654,655,752,771,876,926,1020
+  Central America,  Southern Africa,147,151,179,204,294,306,343
+  Central America,  Western Africa,370,268,250,378,481,505,540
+  Central America,  Central Asia,6,5,5,6,8,6,7
+  Central America,  Eastern Asia,20158,23488,28960,31193,40549,46212,53196
+  Central America,  South-Eastern Asia,930,1238,1667,2141,3078,3423,3973
+  Central America,  Southern Asia,2335,2893,3689,4443,6190,8083,9366
+  Central America,  Western Asia,5783,5998,6586,5839,6038,6838,7732
+  Central America,  Eastern Europe,6653,6581,7237,6532,7652,7989,9068
+  Central America,  Northern Europe,5345,6237,7705,7558,8945,9887,11178
+  Central America,  Southern Europe,39320,37030,37638,34912,39302,43445,48582
+  Central America,  Western Europe,18667,20011,23475,23701,29549,31505,35210
+  Central America,  Caribbean,20425,23127,29325,29231,38125,41860,51844
+  Central America,  South America,60959,70521,88535,111927,169444,197697,398956
+  Central America, NORTHERN AMERICA,238417,312538,403790,568187,806149,798522,878451
+  Central America,  Australia and New Zealand,450,563,728,785,993,1069,1207
+  Central America,  Melanesia,1,1,1,2,2,1,1
+  South America,  Eastern Africa,1607,1808,2003,2055,2413,2758,2952
+  South America,  Middle Africa,5207,5947,6685,6978,7259,10405,13468
+  South America,  Northern Africa,8133,7333,6600,6163,6395,7428,7844
+  South America,  Southern Africa,481,470,470,437,2043,2369,2632
+  South America,  Western Africa,398,399,495,1876,4770,11419,16517
+  South America,  Central Asia,0,7,11,33,111,131,133
+  South America,  Eastern Asia,148929,143244,138814,143461,150802,187186,221827
+  South America,  South-Eastern Asia,2564,2612,2698,3824,4430,4976,5635
+  South America,  Southern Asia,2409,2430,2485,2856,3576,5122,13816
+  South America,  Western Asia,65185,59694,54192,51671,49818,55656,61251
+  South America,  Eastern Europe,102403,84447,67072,52015,38425,42898,45730
+  South America,  Northern Europe,20551,19910,19639,20452,23012,27004,31806
+  South America,  Southern Europe,1342721,1136638,933593,809695,697910,792507,825718
+  South America,  Western Europe,137258,131251,125822,128290,135235,160494,170236
+  South America,  Caribbean,66348,67312,69258,72725,79135,118757,424484
+  South America,  Central America,41030,41379,42031,42472,46712,56300,70263
+  South America, NORTHERN AMERICA,82526,86855,92364,99790,118809,139213,172124
+  South America,  Australia and New Zealand,1832,1956,2138,2247,2653,3004,3737
+  South America,  Melanesia,21,23,23,20,11,13,11
+ NORTHERN AMERICA,  Eastern Africa,199210,258254,321325,487572,673305,846463,1041477
+ NORTHERN AMERICA,  Middle Africa,12211,24830,37821,64916,93079,142131,185367
+ NORTHERN AMERICA,  Northern Africa,150117,220360,293321,368068,456587,689458,801831
+ NORTHERN AMERICA,  Southern Africa,58891,80412,102944,113013,125578,148023,168266
+ NORTHERN AMERICA,  Western Africa,128199,242966,360553,491290,635842,837504,1071816
+ NORTHERN AMERICA,  Central Asia,30137,37523,45192,57014,71156,126795,144491
+ NORTHERN AMERICA,  Eastern Asia,2233530,2891093,3571824,4040218,4621216,5344541,4886669
+ NORTHERN AMERICA,  South-Eastern Asia,2267662,2922999,3597824,4066622,4651687,5162426,5360899
+ NORTHERN AMERICA,  Southern Asia,1073869,1708506,2362812,3022089,3749923,4894791,5537624
+ NORTHERN AMERICA,  Western Asia,576680,729993,889014,1009856,1156955,1744985,1619552
+ NORTHERN AMERICA,  Eastern Europe,1508784,1727884,1960993,2032341,2183065,2205201,2227714
+ NORTHERN AMERICA,  Northern Europe,1836172,1799054,1778953,1703400,1687920,1600179,1610643
+ NORTHERN AMERICA,  Southern Europe,1794482,1806197,1831101,1761094,1761384,1741818,1707336
+ NORTHERN AMERICA,  Western Europe,1505845,1526734,1555947,1492090,1449372,1379051,1324179
+ NORTHERN AMERICA,  Caribbean,3311502,4091533,4876326,5201157,5742178,6303743,6798694
+ NORTHERN AMERICA,  Central America,5492007,8511812,11595540,13240748,15323326,15308301,14943682
+ NORTHERN AMERICA,  South America,1172660,1666111,2172951,2577351,3069069,3368285,3793257
+ NORTHERN AMERICA,  Australia and New Zealand,78291,95806,114121,125032,133740,154382,186631
+ NORTHERN AMERICA,  Melanesia,31451,42739,54638,58927,65730,71785,78579
+  Australia and New Zealand,  Eastern Africa,46161,54645,65437,93109,128743,161525,187620
+  Australia and New Zealand,  Middle Africa,808,871,1000,1730,4410,7040,8737
+  Australia and New Zealand,  Northern Africa,45408,47091,47286,63847,74703,72954,80128
+  Australia and New Zealand,  Southern Africa,64817,73182,107439,156056,207124,237076,277311
+  Australia and New Zealand,  Western Africa,2548,3701,4881,9936,17311,24661,31277
+  Australia and New Zealand,  Central Asia,709,868,1050,1800,3040,4510,5389
+  Australia and New Zealand,  Eastern Asia,219476,281171,358873,513174,714440,901056,1149596
+  Australia and New Zealand,  South-Eastern Asia,462938,525168,568763,664543,846207,1003393,1211798
+  Australia and New Zealand,  Southern Asia,158181,192330,236252,359203,657680,933403,1235711
+  Australia and New Zealand,  Western Asia,166821,180801,197267,226438,266140,303729,359282
+  Australia and New Zealand,  Eastern Europe,162226,175014,173486,175429,174637,176977,194868
+  Australia and New Zealand,  Northern Europe,1446003,1427933,1447427,1460116,1564893,1622399,1734126
+  Australia and New Zealand,  Southern Europe,678065,687603,657698,650851,621958,596652,624909
+  Australia and New Zealand,  Western Europe,316715,314364,304372,313788,324422,318676,355450
+  Australia and New Zealand,  Caribbean,2804,3527,4269,4679,5229,6069,6593
+  Australia and New Zealand,  Central America,11005,12746,13770,14529,16550,19290,22048
+  Australia and New Zealand,  South America,68175,70312,69585,80204,105442,134428,180834
+  Australia and New Zealand, NORTHERN AMERICA,96249,102089,110887,132785,159524,190070,227049
+  Australia and New Zealand,  Melanesia,58153,63686,76516,96137,115782,134054,152722
+  Melanesia,  Eastern Africa,38,38,28,34,28,28,27
+  Melanesia,  Middle Africa,0,0,0,0,0,0,0
+  Melanesia,  Northern Africa,1538,1782,2027,2158,2291,1759,1865
+  Melanesia,  Southern Africa,0,0,0,0,0,0,0
+  Melanesia,  Western Africa,0,0,0,0,0,0,0
+  Melanesia,  Central Asia,0,0,0,0,0,0,0
+  Melanesia,  Eastern Asia,1790,1797,1665,1731,1694,1679,1695
+  Melanesia,  South-Eastern Asia,12979,12581,11738,15234,18566,18075,18291
+  Melanesia,  Southern Asia,4462,4454,4306,4329,4584,4717,4820
+  Melanesia,  Western Asia,0,0,0,0,0,0,0
+  Melanesia,  Eastern Europe,41,42,31,31,26,26,25
+  Melanesia,  Northern Europe,3342,3196,2434,2397,2116,2151,2163
+  Melanesia,  Southern Europe,325,376,428,456,484,370,389
+  Melanesia,  Western Europe,19595,22669,25744,31189,36627,44444,47197
+  Melanesia,  Caribbean,0,0,0,0,0,0,0
+  Melanesia,  Central America,0,0,0,0,0,0,0
+  Melanesia,  South America,0,0,0,0,0,0,0
+  Melanesia, NORTHERN AMERICA,1603,1637,1253,1202,984,995,996
+  Melanesia,  Australia and New Zealand,20394,20791,16506,16663,15001,15144,15282
