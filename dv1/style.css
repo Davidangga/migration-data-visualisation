@@ -1,3 +1,7 @@
+body{
+  background-color: #F8F4F0;
+}
+
 #dv-1{
   display: flex;
 }
