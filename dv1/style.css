@@ -1,3 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@500&family=Oleo+Script&family=Pattaya&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  font-family: 'Alkatra', cursive;
+}
+
+p {
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+.content {
+  left: 50%;
+  text-align: center;
+}
+
+.content h2 {
+	color: #fff;
+	font-size: 8em;
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
+.content h2:nth-child(1) {
+	color: grey;
+	opacity: 0.5;
+/* 	-webkit-text-stroke: 2px #53b3cb; */
+}
+
+.content h2:nth-child(2) {
+	color: #023e8a;
+	animation: animate 4s ease-in-out infinite;
+}
+
+.sidenav {
+  width: 95px;
+  height: 670px;
+  position: fixed;
+  z-index: 1;
+  top: 20px;
+  left: -20px;
+  background: #023e8a;
+  overflow-x: hidden;
+  padding: 10px 0;
+  border-radius: 20px;
+  margin-left: 5px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #2196F3;
+  display: block;
+}
+
+.sidenav img:hover {
+  opacity: 0.7;
+  background-color: white;
+  border-radius: 20px;
+}
+@keyframes animate {
+	0%,
+	100% {
+		clip-path: polygon(
+			0% 45%,
+			16% 44%,
+			33% 50%,
+			54% 60%,
+			70% 61%,
+			84% 59%,
+			100% 52%,
+			100% 100%,
+			0% 100%
+		);
+	}
+
+	50% {
+		clip-path: polygon(
+			0% 60%,
+			15% 65%,
+			34% 66%,
+			51% 62%,
+			67% 50%,
+			84% 45%,
+			100% 46%,
+			100% 100%,
+			0% 100%
+		);
+	}
+}
+
 #dv-1{
   display: flex;
 }
