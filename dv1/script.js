@@ -103,8 +103,9 @@ function init(){
       
     
     // geojson calling
-    d3.json("customgeo.json").then(function(json){
-
+    d3.json("customgeotopo.json").then(function(json){
+        // unpackage topojson
+        let geojson = topojson.feature(json, json.objects.customgeo);
         d3.csv("netmigration.csv", function(data){
             return { 
                 1990: +data["1990"],
@@ -117,10 +118,9 @@ function init(){
                 subregion: data.SubRegion
             }
         }).then(function(data){
-
             for(const d of data){
                 const subRegion = d.subregion;
-                for (const j of json.features){
+                for (const j of geojson.features){
                     if (subRegion == j.properties.subregion ){
                         j.properties.netMigration = d;
                     }
@@ -132,12 +132,14 @@ function init(){
                 svg.selectAll("path")
                 .transition()
                 .duration(100)
-                .style("filter", "saturate(0.2)");
+                .style("filter", "saturate(0.4)")
+                .style("opacity", "0.7");
 
-                svg.selectAll(`.${d3.select(e).attr("class")}`)
+                svg.select(`#${d3.select(e).attr("id")}`)
                 .transition()
                 .duration(100)
-                .style("filter", "saturate(1)");
+                .style("filter", "saturate(1)")
+                .style("opacity", "1");
     
                 svg.append("rect")
                 .attr("x", d3.pointer(event)[0])
@@ -179,7 +181,8 @@ function init(){
                     svg.selectAll("path")
                     .transition()
                     .duration(100)
-                    .style("filter", "saturate(1)");
+                    .style("filter", "saturate(1)")
+                    .style("opacity", "1");
         
                     svg.selectAll("rect").remove();
                     svg.selectAll(".info-box").remove();
@@ -213,18 +216,16 @@ function init(){
                 d3.max(data, function(d){
                     return Math.max(d["1990"], d["1995"], d["2000"], d["2005"], d["2010"], d["2015"], d["2020"]);
                 })]);
-
             svg.selectAll("path")
-            .data(json.features) // important data from geojson is under features key
+            .data(geojson.features) // important data from geojson is under features key
             .join("path")
-            .attr("class", function(d){
+            .attr("id", function(d){
                 return d.properties.subregion.replace(/ /g, '');
             })
             .style("fill", function(d){
                 return colorScale(d.properties.netMigration[selectedYear])
             })
-            .style("stroke", "white")
-            .style("stroke-width", "1px")
+            .attr("stroke", "black")
             .attr("d", path)
             .on("mouseover",function(event, d){
                 return mouseOver(this, d.properties)
@@ -281,16 +282,15 @@ function init(){
                 //     })]);
 
                 svg.selectAll("path")
-                .data(json.features) // important data from geojson is under features key
+                .data(geojson.features) // important data from geojson is under features key
                 .join("path")
-                .attr("class", function(d){
+                .attr("id", function(d){
                     return d.properties.subregion.replace(/ /g, '');
                 })
                 .style("fill", function(d){
                     return colorScale(d.properties.netMigration[selectedYear])
                 })
-                .style("stroke", "white")
-                .style("stroke-width", "1px")
+                .attr("stroke", "black")
                 .attr("d", path)
                 .on("mouseover",function(event, d){
                     return mouseOver(this, d.properties)
@@ -310,6 +310,9 @@ function init(){
                 //         d3.max(data, function(d){return d[selectedYear];}) * 0.9] 
                 // });
             });
+
+            // let na = svg.selectAll(".NorthernAmerica").node().getBBox();
+            // console.log(na);
             
         })
     })

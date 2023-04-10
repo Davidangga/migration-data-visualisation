@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@500&family=Oleo+Script&family=Pattaya&display=swap');
 
 * {
@@ -95,6 +96,10 @@ img {
 			0% 100%
 		);
 	}
+}
+
+body{
+  background-color: #F8F4F0;
 }
 
 #dv-1{
