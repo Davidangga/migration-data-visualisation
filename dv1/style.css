@@ -10,23 +10,45 @@
 
 p {
   text-align: center;
+  padding: 50px;
 }
 
 img {
   display: block;
   margin: auto;
+  
 }
 
-.content {
-  left: 50%;
+.logo{
+  max-height: 10%;
+  
+}
+
+.row {
+  margin-bottom: 200px;
+}
+
+.col {
   text-align: center;
+}
+.desc{
+  background-image: url("img/middle.svg");
+  Background-position: center, top center;
+  Background-repeat: no-repeat;
+}
+.content {
+  max-height: 100px;
+  margin-left: 28vw;
+  margin-right: 28vw;
+  position: relative;
+  align-items: center;
 }
 
 .content h2 {
 	color: #fff;
-	font-size: 8em;
+	font-size: 10vw;
 	position: absolute;
-	transform: translate(-50%, -50%);
+	text-align: center;
 }
 
 .content h2:nth-child(1) {
