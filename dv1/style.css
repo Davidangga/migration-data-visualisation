@@ -1,94 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&family=Patrick+Hand&family=Signika:wght@300;400;500;600;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@500&family=Oleo+Script&family=Pattaya&display=swap');
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-  font-family: 'Alkatra', cursive;
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
 }
 
-p {
-  text-align: center;
-  padding: 50px;
+body{
+    background-color: #F8F5F0 ;
 }
 
-img {
-  display: block;
-  margin: auto;
-  
+nav{
+    position: fixed;
+    z-index: 3;
+    font-family: 'Signika', sans-serif;
+    font-size: 1rem;
+    border-radius: 0 25px 25px 0;
+    top: 20px;
+    bottom: 0;
+    height: 88%;
+    left: 0;
+    background: #023E8A;
+    width: 70px;
+    overflow: hidden;
+    transition: width o.2s linear;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+    justify-items: center;
+    transition: all 0.5s ease;
 }
 
-.logo{
-  max-height: 10%;
-  
+a{
+    position: relative;
+    color: #F8F5F0;
+    display: table;
+    width: 300px;
+    margin: 10px 0 10px 5px
 }
 
-.row {
-  margin-bottom: 200px;
+img{
+    display: inline-block;
+    position: relative;
+    top: 22px;
 }
 
-.col {
-  text-align: center;
+.img-container{
+    position: relative;
+    display: inline-block;
 }
-.desc{
-  background-image: url("img/middle.svg");
-  Background-position: center, top center;
-  Background-repeat: no-repeat;
+
+.img-container::before{
+    position: absolute;
+    top: 22px;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    content: "";
+    border-radius: 10px;
 }
+
+#clicked .img-container::before{
+    background-color: #F8F5F0;
+}
+
+#clicked img{
+    filter: invert(100%);
+}
+
+#clicked .nav-item{
+    font-weight: 800;
+}
+
+.nav-item{
+    position: relative;
+    margin-left: 10px;
+
+}
+
+a:hover .img-container::before{
+    background-color: #F8F5F0;
+}
+a:hover img{
+    filter: invert(100%);
+}
+
+a:hover .nav-item{
+    font-weight: 800;
+}
+nav:hover{
+    width: 250px;
+    transition: all 0.5s ease;
+}
+
 .content {
-  max-height: 100px;
-  margin-left: 28vw;
-  margin-right: 28vw;
-  position: relative;
-  align-items: center;
+    margin-left: 0vw;
+    margin-right: 40vw;
+    position: relative;
+    align-items: center;
+    font-family: 'Alkatra', cursive;
 }
-
+  
 .content h2 {
-	color: #fff;
-	font-size: 10vw;
-	position: absolute;
-	text-align: center;
+    color: #fff;
+    font-size: 10vw;
+    position: absolute;
+    text-align: center;
+    font-family: 'Alkatra', cursive;
 }
-
+  
 .content h2:nth-child(1) {
-	color: grey;
-	opacity: 0.5;
-/* 	-webkit-text-stroke: 2px #53b3cb; */
+    color: grey;
+    opacity: 0.5;
 }
 
 .content h2:nth-child(2) {
-	color: #023e8a;
-	animation: animate 4s ease-in-out infinite;
+    color: #023e8a;
+    animation: animate 4s ease-in-out infinite;
 }
 
-.sidenav {
-  width: 95px;
-  height: 670px;
-  position: fixed;
-  z-index: 1;
-  top: 20px;
-  left: -20px;
-  background: #023e8a;
-  overflow-x: hidden;
-  padding: 10px 0;
-  border-radius: 20px;
-  margin-left: 5px;
-}
-
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #2196F3;
-  display: block;
-}
-
-.sidenav img:hover {
-  opacity: 0.7;
-  background-color: white;
-  border-radius: 20px;
-}
 @keyframes animate {
 	0%,
 	100% {
@@ -120,40 +149,197 @@ img {
 	}
 }
 
-body{
-  background-color: #F8F4F0;
+#hero-section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hero-section img{
+    margin-top: 20px;
+}
+
+#hero-section #author{
+    position: relative;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 2.2rem;
+    color: #767676;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 40px;
+    top: 200px;
+    
+}
+
+#author span{
+    color: #023E8A;
+}
+
+#hero-content{
+    font-family: 'Signika', sans-serif;
+    position: relative;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    width: 50vw;
+    margin-left: 40px;
+    text-align: center;
+    top: 240px;
+}
+
+#arrow{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-left: 40px;
+    font-family: 'Signika', sans-serif;
+    top: 280px;
+}
+
+#arrow img{
+    width: 1vw;
+    margin: auto;
+    margin-bottom: 25px;
+    animation: up-down 2s ease-in-out infinite;
+}
+
+@keyframes up-down {
+    0% {
+      transform: translateY(0); /* Start at the original position */
+    }
+    50% {
+      transform: translateY(-15px); /* Move up */
+    }
+    100% {
+      transform: translateY(0); /* Move back down to the original position */
+    }
+}
+
+
+#body-section{
+    display: flex;
+    margin: 0 150px;
+    margin-top: 450px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#body-section .group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 180px ;
+    margin-left: 40px;
+}
+
+#body-section img{
+    width: 30vw;
+    z-index: -1;
+    margin-right: 150px;
+
+}
+
+#body-section .rightside{
+    margin-left: 180px;
+}
+
+#body-section .rightside h4{
+    font-size: 2.5rem;
+    font-family: 'Patrick Hand', cursive;
+    color: #8A8A8A;
+    margin-bottom: 50px;
+}
+
+#body-section .rightside .line {
+    position: relative;
+    border-top: 1px solid black;
+    bottom: 45px;
+    margin: 10px 0;
+    
+  }
+#body-section .rightside p{
+    font-family: 'Signika', sans-serif;
+    line-height: 2rem;
+}
+
+#body-section .group:nth-child(3) img{
+    margin-left: 150px;
+    width: 20vw;
+    transform: translate(-70px,0);
+
+}
+
+.outer-container{
+    position: relative;
+    z-index: -1;
+
+}
+.line-container{
+    position: absolute;
+    height: 200vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+.line-container svg{
+    display: inline-block;
+    margin-left: 47vw;
+    height: 100%;
+    width: 8vw;
+}
+.line-container svg path{
+    stroke-width: 2;
+    stroke: black;
 }
 
 #dv-1{
   display: flex;
+  margin-left: 50px;
 }
 
-.left-info{
-  padding-left: 50px;
+#dv-1 .chart svg{
+    position: relative;
+    z-index: 1;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+.right-column{
+    position: relative;
+    z-index: 1;
+    margin-left: 50px;
+    position: absolute;
+    height: 680px;
+    left: 1100px;
+    top: 25px;
 }
 .range-input {
-  background:#ffff;
-  padding:10px 20px;
-  display:flex;
-  align-items:center;
-  border: 2px solid black;
-  border-radius:10px;
+    position: relative;
+    background:#ffff;
+    padding:10px 20px;
+    display:flex;
+    align-items:center;
+    border: 2px solid black;
+    border-radius:10px;
+    z-index: 3;
 }
 .range-input input {
-  -webkit-appearance:none;
-  width:200px;
-  height:2px;
-  background:black;
-  border:none;
-  outline:none;
+    -webkit-appearance: none;
+    width:200px;
+    height:2px;
+    background:black;
+    border:none;
+    outline:none;
 }
 .range-input input::-webkit-slider-thumb {
-  -webkit-appearance:none;
-  width:20px;
-  height:20px;
-  background:#ffff;
-  border:2px solid black;
-  border-radius:50%;
+    -webkit-appearance:none;
+    width:20px;
+    height:20px;
+    background:#ffff;
+    border:2px solid black;
+    border-radius:50%;
 }
 .range-input input::-webkit-slider-thumb:hover {
   background: blue;
@@ -169,4 +355,72 @@ body{
 }
 .range-input .value div {
   transition:all 300ms ease-in-out;
+}
+
+.chart h2{
+    position: relative;
+    width: 500px;
+    top: 25px;
+    left: 360px;
+    margin-bottom: 15px;
+    font-family: 'Patrick Hand', cursive;
+    font-weight: 100;
+    font-size: 2rem;
+}
+
+.chart #chart-year{
+    position: absolute;
+    font-family: 'Patrick Hand', cursive;
+    left: 920px;
+    top: 100px;
+}
+
+.chart #chart-year span{
+    font-size: 3rem;
+}
+
+#first-widget{
+    font-family: 'Patrick Hand', cursive;
+    color: #fff;
+    background-color: #023E8A;
+    padding: 20px;
+    height: 150px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+#first-widget #total-migration{
+    
+    margin-top: 5px;
+    margin-left: 40px;
+    font-size: 3rem;
+    letter-spacing: 3px;
+}
+#second-widget{
+    background-color: white;
+    padding: 20px;
+    position: relative;
+    margin-top: 30px;
+    border-radius: 15px;
+    padding-bottom: 20px;
+}
+
+#second-widget h3{
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-family: 'Patrick Hand', cursive;
+}
+
+#third-widget{
+    background-color: white;
+    width: 350px;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 15px;
+    font-family: 'Patrick Hand', cursive;
+}
+
+#third-widget h3{
+    margin-bottom: 20px;
+    font-size: 1.2rem;
 }

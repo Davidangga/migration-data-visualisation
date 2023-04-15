@@ -8,37 +8,88 @@
     <meta name="keywords" content="HTML, CSS, D3">
     <meta name="author" content="David Anggawijaya">
     <title>DV 1</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Signika:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="//d3js.org/topojson.v1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <style>
     </style>
 </head>
 <body>
-    <div class="sidenav">
-        <a href="main.html"><img alt="home" class="logo" src="img/logo1.png"></a>
-        <a href="index.html"
-          ><img alt="analytics" class="logo" src="img/logo2.png"></a>
-        <a href="#analytics2"
-          ><img alt="analytics2" class="logo" src="img/logo3.png"></a>
-        <a href="#conclusion"
-          ><img alt="conclusion" class="logo" src="img/logo4.png"></a>
-      </div>
-    <div id="dv-1">
-        <div class="chart"></div>
-        <div class="left-info">
-            <h3>Year Slider:</h3>
-            <div class="range-input">
-                <input type="range" min="1990" max="2020" value="1990" step="5">
-                <div class="value">
-                  <div></div>
+  <nav>
+    <ul>
+        <li>
+            <a href="home.html">
+                <div class="img-container">
+                    <img src="img/logo1.svg" alt="">
                 </div>
+                <span class="overlay"></span>
+                <span class="nav-item">Home</span>
+            </a>
+        </li>
+        <li>
+            <a id="clicked" href="index.html">
+                <div class="img-container">
+                    <img src="img/logo2.svg" alt="">
+                </div>
+                <span class="overlay"></span>
+                <span class="nav-item">Migration Flow</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="img-container">
+                    <img src="img/logo3.svg" alt="">
+                </div>
+                <span class="overlay"></span>
+                <span class="nav-item">Impact of Migration</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="img-container">
+                    <img src="img/logo4.svg" alt="">
+                </div>
+                <span class="overlay"></span>
+                <span class="nav-item">Forced Displacement</span>
+            </a>
+        </li>
+    </ul>
+  </nav>
+
+  <main>
+    <div id="dv-1">
+        <div class="chart">
+            <h2>Population Growth in Migration Flow</h2>
+            <div id="chart-year">
+                <p>year <span id="title-year">1990</span></p>
             </div>
         </div>
-    </div>
+        <div class="right-column">
+            <div id="first-widget">
+                <h3>Total Migration:</h3>
+                <h2 id="total-migration"></h2>
+            </div>
+            <div id="second-widget">
+                <h3>Year Slider:</h3>
+                <div class="range-input">
+                    <input type="range" min="1990" max="2020" value="1990" step="5">
+                    <div class="value">
+                    <div></div>
+                    </div>
+                </div>
+            </div>
+            <div id="third-widget">
+                <h3>Top 5 Sub-Region With Largest Migration</h3>
+                <div></div>
+            </div>
+
+
+        </div>
+  </div>
+  </main>
 </body>
 </html>

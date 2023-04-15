@@ -1,7 +1,7 @@
 function init(){
 
     // SVG size
-    const w = 1100, h = 700;
+    const w = 1400, h = 650;
 
     // setting up d3 projection, used to tranform coordinates into x and y values
     const projection = d3.geoMercator()
@@ -17,7 +17,7 @@ function init(){
     .projection(projection);
 
     // svg base creation
-    const svg = d3.select(".chart").append("svg").attr("width", w).attr("height", h).style("border","1px solid black");
+    const svg = d3.select(".chart").append("svg").attr("width", w).attr("height", h);
 
     // function for choroplast legend
     function legend({
@@ -27,7 +27,7 @@ function init(){
         width = 320,
         height = 44 + tickSize,
         marginTop = 18,
-        marginRight = 0,
+        marginRight = 20,
         marginBottom = 16 + tickSize,
         marginLeft = 0,
         ticks = width / 64,
@@ -40,7 +40,7 @@ function init(){
           .attr("width", width)
           .attr("height", height)
           .attr("viewBox", [0, 0, width, height])
-          .attr("transform", `translate( ${marginLeft + 10}, ${h - height - marginBottom + tickSize})`)
+          .attr("transform", `translate( ${1000 - width - marginRight}, ${h - height - marginBottom + tickSize})`)
           .style("overflow", "visible")
           .style("display", "block");
       
@@ -203,17 +203,17 @@ function init(){
                     .attr("fill", "white");
 
                     text.append("tspan")
-                    .text("NET")
+                    .text("POPULATION")
                     .style("font-family", "'Signika', sans-serif" )
                     .attr("dy", "-0.5rem")
                     .style("font-size", "0.7rem")
                     .attr("fill", "white");
                     
                     text.append("tspan")
-                    .text("MIGRATION")
+                    .text("GROWTH")
                     .style("font-family", "'Signika', sans-serif" )
                     .style("font-size", "0.7rem")
-                    .attr("dx", "-1.3rem")
+                    .attr("dx", "-3.9rem")
                     .attr("dy", "0.6rem")
                     .attr("fill", "white");
 
@@ -374,7 +374,7 @@ function init(){
                         .attr("y", d3.pointer(event)[1])
                         
                         text.append("tspan")
-                        .text(`${d[4].toLocaleString()} `)
+                        .text(`${(d[4] < 0) ? (d[4] * -1).toLocaleString(): d[4].toLocaleString()} `)
                         .style("font-family", "'Signika', sans-serif" )
                         .attr("fill", "white")
                         .attr("dy", "0.5rem")
@@ -486,10 +486,93 @@ function init(){
                 // selected sub region and year
                 let selectedsubregion = "";
                 let selectedYear = "1990";
+                let sorteddata = []
+                let totalmigration = 0;
 
                 // Preserve links
                 let links = [];
+
+                for(const d of csv1){
+                    totalmigration += Math.abs(d[selectedYear]);
+                    if (d[selectedYear] < 0){
+                        let temp = []
+                        temp.push(d["subregion"]);
+                        temp.push(Math.abs(d[selectedYear]));
+                        sorteddata.push(temp);
+                    }
+                }
+                document.querySelector("#total-migration").innerHTML = totalmigration.toLocaleString();
+
+                sorteddata.sort(function(a,b){ return d3.descending(a[1], b[1])})
     
+                // horizontal bar
+
+                let bar = d3.select("#third-widget").select("div").append("svg").attr("width", 300).attr("height", 250);
+                const xscale = d3.scaleLinear().range([0,300]).domain([0, d3.max(sorteddata.slice(0,5), (d) =>
+                    d[1]
+                )]);
+                const yscale = d3.scaleBand().range([0,250]).domain(d3.range(sorteddata.slice(0,5).length)).paddingInner(0.1);
+
+                const barcolourscale = ['#66c2a5','#fc8d62','#8da0cb','#e78ac3','#a6d854'];
+
+                bar.selectAll("rect")
+                .data(sorteddata.slice(0,5))
+                .join("rect")
+                .style("fill",(d,i) => {
+                    return barcolourscale[i];
+                })
+                .attr("x", 0)
+                .attr("y", (d,i) => yscale(i))
+                .attr("width", 0)
+                .attr("height", function (d){
+                    return yscale.bandwidth();
+                })
+                .attr("rx", "25")
+                .transition()
+                .duration(500)
+                .delay(function(d, i) { return i * 100; })
+                .attr("width", function(d){ return xscale(d[1])});
+
+                bar.selectAll(".label")
+                .data(sorteddata.slice(0,5))
+                .join("text")
+                .text((d) => d[0])
+                .attr("class", "label")
+                .attr("x", 20 )
+                .attr("y", (d,i) => { return yscale(i) + 28})
+                .style("font-family", "'Signika', sans-serif" )
+                .style("font-size", "0.8rem")
+                .style("opacity",0)
+                .transition()
+                .duration(500)
+                .delay(function(d, i) { return i * 100; })
+                .style("opacity", 1);
+
+                bar.selectAll(".label-value")
+                .data(sorteddata.slice(0,5))
+                .join("text")
+                .text((d) => d3.format(".2s")(d[1]))
+                .attr("class", "label-value")
+                .attr("x", (d) => {
+                    let x = 0
+                    d3.selectAll(".label").nodes().filter(function(label) {
+                        if (label.innerHTML == d[0]){
+                            x = label.getComputedTextLength() + 30;
+                        }
+                    })
+                    return x;
+                })
+                .attr("y", (d,i) => { return yscale(i) + 28})
+                .style("font-family", "'Signika', sans-serif" )
+                .style("font-size", "0.8rem")
+                .style("font-weight", 800)
+                .style("opacity",0)
+                .transition()
+                .duration(500)
+                .delay(function(d, i) { return i * 100; })
+                .style("opacity", 1);
+
+
                 colorScale.domain([
                     d3.min(csv1, function(d){
                         return Math.min(d["1990"], d["1995"], d["2000"], d["2005"], d["2010"], d["2015"], d["2020"]);
@@ -558,6 +641,86 @@ function init(){
     
                     selectedYear = rangeInput.value;
 
+                    totalmigration = 0;
+                    sorteddata = [];
+                    for(const d of csv1){
+                        totalmigration += Math.abs(d[selectedYear]);
+                        if (d[selectedYear] < 0){
+                            let temp = []
+                            temp.push(d["subregion"]);
+                            temp.push(Math.abs(d[selectedYear]));
+                            sorteddata.push(temp);
+                        }
+                    };
+                    document.querySelector("#total-migration").innerHTML = totalmigration.toLocaleString();
+    
+                    sorteddata.sort(function(a,b){ return d3.descending(a[1], b[1])});
+        
+                    // horizontal bar
+                    const xscale = d3.scaleLinear().range([80,300]).domain([0, d3.max(sorteddata.slice(0,5), (d) =>
+                        d[1]
+                    )]);
+                    const yscale = d3.scaleBand().range([0,250]).domain(d3.range(sorteddata.slice(0,5).length)).paddingInner(0.1);
+
+                    bar.selectAll("rect")
+                    .data(sorteddata.slice(0,5))
+                    .join("rect")
+                    .style("fill",(d,i) => {
+                        return barcolourscale[i];
+                    })
+                    .attr("x", 0)
+                    .attr("y", (d,i) => yscale(i))
+                    .attr("width", 0)
+                    .attr("height", function (d){
+                        return yscale.bandwidth();
+                    })
+                    .attr("rx", "25")
+                    .transition()
+                    .duration(500)
+                    .delay(function(d, i) { return i * 100; })
+                    .attr("width", function(d){ return xscale(d[1])});
+
+                    bar.selectAll(".label")
+                    .data(sorteddata.slice(0,5))
+                    .join("text")
+                    .text((d) => d[0])
+                    .attr("class", "label")
+                    .attr("x", 20 )
+                    .attr("y", (d,i) => { return yscale(i) + 28})
+                    .style("font-family", "'Signika', sans-serif" )
+                    .style("font-size", "0.8rem")
+                    .style("opacity",0)
+                    .transition()
+                    .duration(500)
+                    .delay(function(d, i) { return i * 100; })
+                    .style("opacity", 1);
+
+                    bar.selectAll(".label-value")
+                    .data(sorteddata.slice(0,5))
+                    .join("text")
+                    .text((d) => d3.format(".2s")(d[1]))
+                    .attr("class", "label-value")
+                    .attr("x", (d) => {
+                        let x = 0
+                        d3.selectAll(".label").nodes().filter(function(label) {
+                            if (label.innerHTML == d[0]){
+                                x = label.getComputedTextLength() + 30;
+                            }
+                        })
+                        return x;
+                    })
+                    .attr("y", (d,i) => { return yscale(i) + 28})
+                    .style("font-family", "'Signika', sans-serif" )
+                    .style("font-size", "0.8rem")
+                    .style("font-weight", 800)
+                    .style("opacity",0)
+                    .transition()
+                    .duration(500)
+                    .delay(function(d, i) { return i * 100; })
+                    .style("opacity", 1);
+
+
+                    document.querySelector("#title-year").innerHTML = selectedYear;
                     svg.selectAll(".subregion").remove();
                     svg.selectAll(".link").remove();
                     svg.selectAll(".path")
