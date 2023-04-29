@@ -73,7 +73,7 @@ const generateScatterPlot = (year) => {
       .attr("cx", (d) => xScale(d["i" + year]))
       .attr("cy", (d) => yScale(d["g" + year]))
       .attr("fill", "steelblue")
-      .style("opacity", 0.8)
+      .style("opacity", 0.7)
       .attr("clip-path", "url(#clip)");
     
     const scatter2 = g.selectAll(".circle2").data(data);
@@ -140,3 +140,14 @@ yearSliderEl.addEventListener("change", () => {
 
 generateScatterPlot(); //setup
 generateScatterPlot("1990"); //default in 1990
+
+const options = document.querySelectorAll('input[type="radio"]');
+
+options.forEach(option => option.addEventListener('change', handleOptionChange));
+
+function handleOptionChange() {
+  const selectedOption = document.querySelector('input[type="radio"]:checked').value;
+
+  d3.selectAll(".circle2").transition().duration(500).style("opacity", selectedOption === 'option1' ? 0 : selectedOption === 'option2' ? 0.7 : 0.5);
+  d3.selectAll(".circle1").transition().duration(500).style("opacity", selectedOption === 'option1' ? 0.7 : selectedOption === 'option2' ? 0 : 0.7);
+}
