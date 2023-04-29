@@ -228,7 +228,6 @@ function init(){
                     .attr("transform", `translate(20, -${text.node().getBBox().height + 15})`)
                     .style("fill", "#515152");
 
-                    
                     svg.selectAll(".subregion").on("mousemove", function(event){
                         svg.selectAll("rect")
                         .attr("x", d3.pointer(event)[0])
@@ -265,7 +264,6 @@ function init(){
                     let migrationflows = [];
                     links = [];
                     let circleRadius = 15;
-
 
                     for (const flow1 of csv2){
                         for (const flow2 of csv2){
@@ -572,7 +570,6 @@ function init(){
                 .delay(function(d, i) { return i * 100; })
                 .style("opacity", 1);
 
-
                 colorScale.domain([
                     d3.min(csv1, function(d){
                         return Math.min(d["1990"], d["1995"], d["2000"], d["2005"], d["2010"], d["2015"], d["2020"]);
@@ -621,8 +618,6 @@ function init(){
                         }) * 0.9] 
                 });
 
-
-    
                 // Year slider
                 let rangeInput = document.querySelector(".range-input input");
                 let rangeValue = document.querySelector(".range-input .value div");

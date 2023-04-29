@@ -11,10 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Signika:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="//d3js.org/topojson.v1.min.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
     <style>
     </style>
 </head>
@@ -31,7 +29,7 @@
             </a>
         </li>
         <li>
-            <a id="clicked" href="index.html">
+            <a href="index.html">
                 <div class="img-container">
                     <img src="img/logo2.svg" alt="">
                 </div>
@@ -40,7 +38,7 @@
             </a>
         </li>
         <li>
-            <a href="migration.html">
+            <a id="clicked" href="migration.html">
                 <div class="img-container">
                     <img src="img/logo3.svg" alt="">
                 </div>
@@ -61,22 +59,22 @@
   </nav>
 
   <main>
-    <div id="dv-1">
+    <div>
         <div class="chart">
-            <h2>Population Growth in Migration Flow</h2>
+            <h2>Migration vs GDP Growth</h2>
             <div id="chart-year">
-                <p>year <span id="title-year">1990</span></p>
+                <p>year <span id="selected">1990</span></p>
             </div>
+            <svg id="chart" width="700" height="500"></svg>
         </div>
         <div class="right-column">
             <div id="first-widget">
                 <h3>Total Migration:</h3>
-                <h2 id="total-migration"></h2>
             </div>
             <div id="second-widget">
                 <h3>Year Slider:</h3>
                 <div class="range-input">
-                    <input type="range" min="1990" max="2020" value="1990" step="5">
+                    <input type="range" min="1990" max="2020" value="1990" step="5" id="slider">
                     <div class="value">
                     <div></div>
                     </div>
@@ -91,5 +89,6 @@
         </div>
   </div>
   </main>
+  <script src="app.js"></script>
 </body>
 </html>
