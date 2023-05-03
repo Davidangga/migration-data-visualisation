@@ -424,3 +424,23 @@ nav:hover{
     margin-bottom: 20px;
     font-size: 1.2rem;
 }
+
+button {
+    background-color: white; /* Green */
+    border: none;
+    color: #023E8A;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 0px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  button:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
