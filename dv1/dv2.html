@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Data Visualisation">
+    <meta name="keywords" content="HTML, CSS, D3">
+    <meta name="author" content="David Anggawijaya">
+    <title>Migration vs GDP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Signika:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    </style>
+</head>
+<body>
+  <nav>
+    <ul>
+        <li>
+            <a href="index.html">
+                <div class="img-container">
+                    <img src="img/logo1.svg" alt="">
+                </div>
+                <span class="overlay"></span>
+                <span class="nav-item">Home</span>
+            </a>
+        </li>
+        <li>
+            <a href="dv1.html">
+                <div class="img-container">
+                    <img src="img/logo2.svg" alt="">
+                </div>
+                <span class="overlay"></span>
+                <span class="nav-item">Migration Flow</span>
+            </a>
+        </li>
+        <li>
+            <a id="clicked" href="dv2.html">
+                <div class="img-container">
+                    <img src="img/logo3.svg" alt="">
+                </div>
+                <span class="overlay"></span>
+                <span class="nav-item">Impact of Migration</span>
+            </a>
+        </li>
+    </ul>
+  </nav>
+
+  <main>
+    <div>
+        <div class="chart">
+            <h2>Migration vs GDP Growth</h2>
+            <div id="chart-year">
+                <p>year <span id="selected">1990</span></p>
+            </div>
+            <svg id="chart" width="700" height="500"></svg>
+        </div>
+        <div class="right-column">
+            <div id="first-widget">
+                <h3>Show</h3>
+                <label>
+                    <input type="radio" name="option" value="option1">
+                    Immigration
+                  </label>
+                  <label>
+                    <input type="radio" name="option" value="option2">
+                    Emigration
+                  </label>
+                  <label>
+                    <input type="radio" name="option" value="option3">
+                    Both
+                  </label><br>
+                  <!-- <button id="hide-zero-button" onclick="hideZeroData(selected)">Hide missing data</button> -->
+            </div>
+            <div id="second-widget">
+                <h3>Year Slider:</h3>
+                <div class="range-input">
+                    <input type="range" min="1990" max="2020" value="1990" step="5" id="slider">
+                    <div class="value">
+                    <div></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+  </div>
+  </main>
+  <script src="dv2.js"></script>
+</body>
+</html>
